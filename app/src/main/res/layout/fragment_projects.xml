@@ -1,0 +1,31 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTeal"
+    tools:context="net.sierrainfosys.pmo.fragment.ProjectsFragment">
+
+    <LinearLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_project_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp" />
+    </LinearLayout>
+
+    <net.sierrainfosys.pmo.custom.MovableFloatingActionButton
+        android:id="@+id/fab_project"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/icon_add"
+        android:tint="@color/colorWhite"
+        app:backgroundTint="@color/colorTeal" />
+
+</FrameLayout>

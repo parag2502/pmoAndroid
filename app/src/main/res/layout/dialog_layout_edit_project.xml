@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_rounded_border_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/opensans_bold"
+            android:text="@string/label_edit_user"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="@string/label_name"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/layout_only_rounded_border_line"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:hint="@string/label_hint_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:padding="12dp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorGray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="@string/label_type"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/et_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/layout_only_rounded_border_line"
+                    android:clickable="true"
+                    android:drawablePadding="12dp"
+                    android:drawableRight="@drawable/dropdown"
+                    android:focusable="false"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:hint="@string/label_hint_type"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:padding="12dp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorGray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="@string/label_manager"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/et_manager"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/layout_only_rounded_border_line"
+                    android:clickable="true"
+                    android:drawablePadding="12dp"
+                    android:drawableRight="@drawable/dropdown"
+                    android:focusable="false"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:hint="@string/label_hint_manager"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:padding="12dp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorGray"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="left"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_active"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:gravity="left|center"
+                            android:text="Active"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="left"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_inactive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:gravity="left|center"
+                            android:text="Inactive"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/layout_rounded_border_teal"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/label_update"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/opensans_bold"
+                    android:text="@string/label_cancel"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorTeal"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

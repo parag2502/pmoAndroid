@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">PMO</string>
+    <string name="label_sign_in">Sign In</string>
+    <string name="label_enter_user_name">Enter Username</string>
+    <string name="label_enter_password">Enter Password</string>
+    <string name="label_forgot_password_underline"><u>Forgot Password?</u></string>
+    <string name="label_do_not_have_acc_sign_up">Don\'t have an account? Sign Up?</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    //User
+    <string name="label_create_user">Create User</string>
+    <string name="label_first_name">First Name</string>
+    <string name="label_hint_first_name">Enter First Name</string>
+    <string name="label_last_name">Last Name</string>
+    <string name="label_hint_last_name">Enter Last Name</string>
+    <string name="label_email">Email</string>
+    <string name="label_hint_email">Enter Email</string>
+    <string name="label_password">Password</string>
+    <string name="label_hint_password">Enter Password</string>
+    <string name="label_location">Location</string>
+    <string name="label_hint_location">Enter Location</string>
+    <string name="label_designation">Designation</string>
+    <string name="label_hint_designation">Enter Designation</string>
+    <string name="label_role">Role</string>
+    <string name="label_hint_role">Select Role</string>
+    <string name="label_add">Add</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="label_edit_user">Edit User Details</string>
+    <string name="label_update">Update</string>
+
+    //Project
+    <string name="label_create_project">Create Project</string>
+    <string name="label_edit_project">Edit Project Details</string>
+    <string name="label_name">Name</string>
+    <string name="label_hint_name">Enter Name</string>
+    <string name="label_type">Type</string>
+    <string name="label_hint_type">Select Type</string>
+    <string name="label_manager">Manager</string>
+    <string name="label_hint_manager">Select Manager</string>
+
+    //Role
+    <string name="label_create_role">Create Role</string>
+    <string name="label_edit_role">Edit Role Details</string>
+    <string name="label_role_name">Role</string>
+    <string name="label_hint_role_name">Enter Role</string>
+    <string name="label_permission">Permission</string>
+
+    //PMO
+    <string name="label_overall_project_health">Overall Project Health</string>
+    <string name="label_scope">Scope</string>
+    <string name="label_schedule">Schedule</string>
+    <string name="label_budget">Budget</string>
+    <string name="label_risk_issues">Risk And Issues</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

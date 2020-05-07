@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTeal"
+    android:clickable="true"
+    android:orientation="vertical"
+    tools:context="net.sierrainfosys.pmo.activity.ProjectDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="center"
+        android:background="@color/colorTeal"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tv_project_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensans_bold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="NA"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="6dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_card_bg"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_project_health"
+                    android:layout_width="45dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:src="@drawable/risk_meter_high" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:gravity="center"
+                    android:text="Project Health"
+                    android:textColor="@color/colorGrayDark"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_scope"
+                    android:layout_width="45dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:src="@drawable/risk_meter_medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:gravity="center"
+                    android:text="Scope"
+                    android:textColor="@color/colorGrayDark"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_schedule"
+                    android:layout_width="45dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:src="@drawable/risk_meter_medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:gravity="center"
+                    android:text="Schedule"
+                    android:textColor="@color/colorGrayDark"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_budget"
+                    android:layout_width="45dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:src="@drawable/risk_meter_high" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:gravity="center"
+                    android:text="Budget"
+                    android:textColor="@color/colorGrayDark"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:fontFamily="@font/opensans_semibold"
+        android:gravity="center"
+        android:text="Phases"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="6dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/layout_card_bg"
+                    android:backgroundTint="@color/colorGreen"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:id="@+id/layout_preparation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="4dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:gravity="center"
+                            android:text="Preparation"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:src="@drawable/icon_expand_arrow"
+                            android:tint="@color/colorWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_expand_preparation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_green"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Project setup"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_green"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Project scope"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_yellow"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Project team"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_green"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Project documentation"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_green"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Communication Plan"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_green"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Project plan"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_green"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Kick off meeting"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_green"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Knowledge Transition"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="6dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/layout_card_bg"
+                    android:backgroundTint="@color/colorRed"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:id="@+id/layout_design"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="4dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:gravity="center"
+                            android:text="Design"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:src="@drawable/icon_expand_arrow"
+                            android:tint="@color/colorWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_expand_design"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginTop="12dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_red"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Planning"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_red"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Workshops"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_yellow"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Gap Analysis"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_red"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Testing"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_red"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Training"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_red"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Risks"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="6dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/layout_card_bg"
+                    android:backgroundTint="@color/colorYellow"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:id="@+id/layout_development"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="4dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:gravity="center"
+                            android:text="Development"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:src="@drawable/icon_expand_arrow"
+                            android:tint="@color/colorWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_expand_development"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginTop="12dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_red"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Build kick of week"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_yellow"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Build and documentation"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_yellow"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Unit Testing"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_green"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Preparation for testing"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_green"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Training"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_red"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Risks"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="6dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/layout_card_bg"
+                    android:backgroundTint="@color/colorGreen"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:id="@+id/layout_testing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="4dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:gravity="center"
+                            android:text="Testing"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:src="@drawable/icon_expand_arrow"
+                            android:tint="@color/colorWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_expand_testing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginTop="12dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_green"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Planning"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_green"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Issue tracker"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_green"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Testing"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_green"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Final Preparation"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_yellow"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Risks"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="6dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/layout_card_bg"
+                    android:backgroundTint="@color/colorGray"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:id="@+id/layout_implementation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="4dp"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:gravity="center"
+                            android:text="Implementation"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:src="@drawable/icon_expand_arrow"
+                            android:tint="@color/colorWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_expand_implementation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginTop="12dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_gray"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Planning"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_gray"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Risks"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_gray"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Final cutover"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="4dp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/layout_rounded_border_gray"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:text="Project closure"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
